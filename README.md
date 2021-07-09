@@ -107,3 +107,42 @@ function rowSumOddNumbers(n) {
 	return Math.pow(n, 3);
 }
 ```
+____
+# Задание 8
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+```html
+function filter_list(l) {
+  return l.filter(Number.isInteger);
+}
+```
+____
+# Задание 9
+Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+```html
+function getSum( a,b )
+{
+  var min = Math.min(a, b),
+  max = Math.max(a, b),
+  result = 0;
+  while (min <= max) {
+    result += min;
+    min++;
+  }
+  return result;
+}
+```
+____
+# Задание 10
+You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+Complete the method which accepts such an array, and returns that single different number.
+```html
+function stray(numbers) {
+    var a = numbers.sort();
+  
+  if(a[0] != a[1]) {
+    return a[0]
+  } 
+  return a[a.length-1]
+}
+```
