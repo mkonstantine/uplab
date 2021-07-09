@@ -25,3 +25,85 @@ function isIsogram(str){
   return true;
 }
 ```
+____
+# Задание 3
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+```html
+function friend(friends){
+  return friends.filter(name => name.length === 4)
+}
+```
+____
+# Задание 4
+In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+```html
+function DNAStrand(dna){
+    var res= "";
+      for(var i =0; i<dna.length; i++) 
+      {
+        if (dna[i]==="A") 
+       {
+        res +="T";
+       }
+        else if (dna[i]==="T") 
+       {
+        res += "A";
+        }
+        else if (dna[i]==="C")
+        {
+        res +="G";
+        }
+        else if (dna[i]==="G")
+        {
+        res += "C";
+        }
+        else {
+        res+=dna[i];
+        }
+     }
+     return result;
+}
+```
+____
+# Задание 5
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel.
+```html
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+```
+____
+# Задание 6
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+```html
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+```
+____
+# Задание 7
+Given the triangle of consecutive odd numbers:
+```html
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+...
+```
+Calculate the sum of the numbers in the nth row of this triangle (starting at index 1)
+```html
+function rowSumOddNumbers(n) {
+	return Math.pow(n, 3);
+}
+```
